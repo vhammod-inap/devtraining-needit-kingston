@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_5" type="string">
+            <choice>
+                <element label="Choice 1" sequence="0" value="Choice 1"/>
+                <element label="Choice 2" sequence="1" value="Choice 2"/>
+                <element label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested" reference="sys_user" type="reference"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="lawlz" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Humanities" sequence="0" value="hr"/>
+                <element label="Faculators" sequence="1" value="fac"/>
+                <element label="Lawgulz" sequence="2" value="lawlz"/>
+                <element label="Rumpalators" sequence="3" value="rump"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Har-1" sequence="0" value="hr1"/>
+                <element label="Har-2" sequence="1" value="hr2"/>
+                <element label="Frak1" sequence="2" value="fac1"/>
+                <element label="Frak2" sequence="3" value="fac2"/>
+                <element label="Lul1" sequence="4" value="lawlz1"/>
+                <element label="Lul2" sequence="5" value="lawlz2"/>
+                <element label="Baq1" sequence="6" value="rump1"/>
+                <element label="Baq2" sequence="7" value="rump2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
